@@ -1,5 +1,4 @@
-from data_provider.data_loader import Dataset_ETT_hour, Dataset_ETT_minute, \
-    Selfdefine,Selfdefine_time
+from data_provider.data_loader import Selfdefine,Selfdefine_time
 from data_provider.uea import collate_fn
 from torch.utils.data import DataLoader
 import random
@@ -18,10 +17,6 @@ torch.backends.cudnn.benchmark = False
 os.environ['PYTHONHASHSEED'] = str(seed)
 
 data_dict = {
-    'ETTh1': Dataset_ETT_hour,
-    'ETTh2': Dataset_ETT_hour,
-    'ETTm1': Dataset_ETT_minute,
-    'ETTm2': Dataset_ETT_minute,
     'Selfdefine': Selfdefine,
     'Selfdefine_time':Selfdefine_time,
 }
